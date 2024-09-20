@@ -17,15 +17,14 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Hamish", "Herman", "Rudy", 
+           "Matt", "Abdul"),
+  github_username = c("hamlot12", "hermansokr", "rudyadair", "matthurrell", "7aman4013"), 
+  colour = c("purple", "yellow", "green", 
+             "red", "blue"),
+  hobby = c("Golf", "Drawing", "Cricket", 
+            "Badminton", "Coding"),
+  favourite_number = c(9, 4, 3, 6, 2)
   )
 
 team_data
@@ -47,19 +46,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+It shows a bar chart displaying the favourite number of each person with their username under their bar. The bars are also filled by the person's favourite colour.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Username", 
+          y = "Favourite Number",
+          title = "Team Numbers")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+The labs command changes the chart title and labels.
 
 ### Exercise 20
 
@@ -69,4 +68,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+The graph does not display the data well as there is little to no change in the height of the graph and across a larger scale of data the graph would be far too wide to read. An alternative would be to display the hobbys as a table with the peoples names next to their hobby. This table would be sorted alphabetically by hobby.
